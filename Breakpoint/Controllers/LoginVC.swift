@@ -10,26 +10,48 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    // Outlets
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    // Variables
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        emailField.delegate = self
+        passwordField.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func signInButtonPressed(_ sender: Any) {
+        if emailField.text != "" && passwordField.text != "" {
+            AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, loginComplete: { (success, error) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                }else{
+                    print(error?.localizedDescription)
+                }
+                
+                AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreationComplete: { (success, error) in
+                    if success{
+                        
+                        AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, loginComplete: { (success, nil) in
+                            self.dismiss(animated: true, completion: nil)
+                        })
+                        
+                    }else{
+                        print(error?.localizedDescription)
+                    }
+                })
+            })
+            
+        }
     }
-    */
 
 }
+
+extension LoginVC:UITextFieldDelegate {}
