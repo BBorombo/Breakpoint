@@ -13,6 +13,12 @@
 		C2AD3F531F7F9B930089BBB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2AD3F511F7F9B930089BBB5 /* Main.storyboard */; };
 		C2AD3F551F7F9B930089BBB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2AD3F541F7F9B930089BBB5 /* Assets.xcassets */; };
 		C2AD3F581F7F9B930089BBB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2AD3F561F7F9B930089BBB5 /* LaunchScreen.storyboard */; };
+		C2AD3F661F7FA7B30089BBB5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD3F651F7FA7B30089BBB5 /* DataService.swift */; };
+		C2AD3F681F7FB09C0089BBB5 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD3F671F7FB09C0089BBB5 /* AuthVC.swift */; };
+		C2AD3F6A1F7FB0D00089BBB5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD3F691F7FB0D00089BBB5 /* LoginVC.swift */; };
+		C2AD3F6C1F7FB1230089BBB5 /* InsertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD3F6B1F7FB1230089BBB5 /* InsertTextField.swift */; };
+		C2AD3F6E1F7FB3050089BBB5 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD3F6D1F7FB3050089BBB5 /* ShadowView.swift */; };
+		C2AD3F701F7FB45E0089BBB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2AD3F6F1F7FB45E0089BBB5 /* GoogleService-Info.plist */; };
 		CE7337B824FEF3BF97662056 /* Pods_Breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EB26F6623498D1FB1A6D99 /* Pods_Breakpoint.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +32,12 @@
 		C2AD3F541F7F9B930089BBB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2AD3F571F7F9B930089BBB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2AD3F591F7F9B930089BBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2AD3F641F7FA5CE0089BBB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2AD3F651F7FA7B30089BBB5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		C2AD3F671F7FB09C0089BBB5 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		C2AD3F691F7FB0D00089BBB5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C2AD3F6B1F7FB1230089BBB5 /* InsertTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTextField.swift; sourceTree = "<group>"; };
+		C2AD3F6D1F7FB3050089BBB5 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		C2AD3F6F1F7FB45E0089BBB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E878E12CE8A39AA8D26D8F51 /* Pods-Breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint/Pods-Breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		F3DF8FE8BF60FCD594959BE0 /* Pods-Breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breakpoint/Pods-Breakpoint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +92,7 @@
 		C2AD3F4A1F7F9B930089BBB5 /* Breakpoint */ = {
 			isa = PBXGroup;
 			children = (
+				C2AD3F6F1F7FB45E0089BBB5 /* GoogleService-Info.plist */,
 				C2AD3F631F7F9C130089BBB5 /* Services */,
 				C2AD3F621F7F9BF60089BBB5 /* Extensions */,
 				C2AD3F611F7F9BE60089BBB5 /* Model */,
@@ -91,7 +103,6 @@
 				C2AD3F541F7F9B930089BBB5 /* Assets.xcassets */,
 				C2AD3F561F7F9B930089BBB5 /* LaunchScreen.storyboard */,
 				C2AD3F591F7F9B930089BBB5 /* Info.plist */,
-				C2AD3F641F7FA5CE0089BBB5 /* GoogleService-Info.plist */,
 			);
 			path = Breakpoint;
 			sourceTree = "<group>";
@@ -101,6 +112,8 @@
 			children = (
 				C2AD3F4D1F7F9B930089BBB5 /* FirstViewController.swift */,
 				C2AD3F4F1F7F9B930089BBB5 /* SecondViewController.swift */,
+				C2AD3F671F7FB09C0089BBB5 /* AuthVC.swift */,
+				C2AD3F691F7FB0D00089BBB5 /* LoginVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -108,6 +121,8 @@
 		C2AD3F601F7F9BDA0089BBB5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C2AD3F6B1F7FB1230089BBB5 /* InsertTextField.swift */,
+				C2AD3F6D1F7FB3050089BBB5 /* ShadowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +144,7 @@
 		C2AD3F631F7F9C130089BBB5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C2AD3F651F7FA7B30089BBB5 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -196,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2AD3F581F7F9B930089BBB5 /* LaunchScreen.storyboard in Resources */,
+				C2AD3F701F7FB45E0089BBB5 /* GoogleService-Info.plist in Resources */,
 				C2AD3F551F7F9B930089BBB5 /* Assets.xcassets in Resources */,
 				C2AD3F531F7F9B930089BBB5 /* Main.storyboard in Resources */,
 			);
@@ -256,9 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2AD3F6C1F7FB1230089BBB5 /* InsertTextField.swift in Sources */,
+				C2AD3F681F7FB09C0089BBB5 /* AuthVC.swift in Sources */,
 				C2AD3F501F7F9B930089BBB5 /* SecondViewController.swift in Sources */,
+				C2AD3F6A1F7FB0D00089BBB5 /* LoginVC.swift in Sources */,
+				C2AD3F6E1F7FB3050089BBB5 /* ShadowView.swift in Sources */,
 				C2AD3F4C1F7F9B930089BBB5 /* AppDelegate.swift in Sources */,
 				C2AD3F4E1F7F9B930089BBB5 /* FirstViewController.swift in Sources */,
+				C2AD3F661F7FA7B30089BBB5 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
